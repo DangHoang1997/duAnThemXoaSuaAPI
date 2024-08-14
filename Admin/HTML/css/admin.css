@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 20px;
+    background-image: url(/img/img/img_sofa.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative; /* Để đặt lớp phủ */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(148, 148, 148, 0.5); Màu đen với độ trong suốt 50% */
+    z-index: 1; /* Đặt lớp phủ ở trên cùng */
+    pointer-events: none; /* Cho phép nhấp chuột qua lớp phủ */
+}
+
